@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JS 12 Forms</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+
+            <form onsubmit="return checkValidity()" action="#" method="get" id="userForm"
+                class="form-control mb-2 p-3 m-auto w-auto bg-info">
+                <div>
+                    <label for="userName" class="form-label fw-bold">Як тебе звати?</label><input class="form-control"
+                        type="text" value="" name="user_name" id="userName" minlength="2" required />
+                </div>
+
+                <div>
+                    <label for="userEmail" class="form-label fw-bold">Куди писати листи?</label>
+                    <input class="form-control mb-2" type="email" value="" name="user_email" id="userEmail"
+                        minlength="3" required />
+                </div>
+
+                <div>
+                    <label for="userPass" class="form-label fw-bold">Пароль (8-16 символів)</label>
+                    <input class="form-control" type="password" value="" name="user_pass" id="userPass" minlength="8"
+                        maxlength="16" required />
+                </div>
+
+                <div>
+                    <label for="appleNum" class="form-label fw-bold">Скільки яблук хочеш
+                        з'їсти?</label>
+                    <input class="form-control" type="number" value="" name="apples" id="appleNum" min="1" required />
+                </div>
+
+
+
+                <div>
+                    <label for="thanks" class="form-label fw-bold">Напиши "Дякую" (за яблука)</label>
+                    <input class="form-control" type="text" value="" name="thanks" id="thanks" minlength="2" required />
+                </div>
+
+                <div class="form-check">
+                    <label for="studyReady" class="form-check-label fw-bold">Згоден на навчання?</label>
+                    <input class="form-check-input" type="checkbox" value="" name="apples" id="studyReady" required />
+                </div>
+
+                <div>
+                    <input class="form-control btn btn-dark fw-bold" type="submit" value="Відправити" id="sendForm" />
+                </div>
+
+                <div>
+                    <input class="form-control btn btn-secondary fw-bold" type="button" value="Валідація"
+                        id="validateForm" />
+                </div>
+
+                <hr>
+
+                <div id="result" class="row text-center m-auto">
+                    <p id="validationResult" class="p-2"></p>
+                </div>
+
+            </form>
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
