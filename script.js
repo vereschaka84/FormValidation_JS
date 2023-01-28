@@ -23,7 +23,7 @@ $(function () {
 	form.addEventListener('submit', function (e) {
 		if (form.checkValidity()) {
 			resultText.text('Дякую!').addClass('text-bg-success');
-			// e.preventDefault();
+			e.preventDefault();
 		}
 	})
 
